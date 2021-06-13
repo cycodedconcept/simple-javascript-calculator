@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with javascript</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand text-success font-weight-bold" href="#">Calculator</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                  <div class="container">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-success font-weight-bold" href="#"><i class="fa fa-home" style="color: red; margin-right: 2px;">History</i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-success font-weight-bold" href="#">Memory</a>
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+                </nav>
+        </header>
+    </div><br><br><br>
+
+    <div class="container">
+      <h2 id="view"></h2>
+      <h2 id="figure"></h2>
+    </div>
+
+    <div class="container">
+        
+    <div class="main">
+        <form name="myForm">
+            <input type="text" name="textview" class="textview" disabled>
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" class="button symbol gray" value="√" onclick="SR('r')" id="r" disabled></td>
+                <td><input type="button" class="button symbol gray" value="X²" onclick="SR('s')" id="s" disabled></td>
+                <td><input type="button" class="button symbol gray" value="⩤" onclick="back()"></td>
+                <td><input type="button" class="button symbol blue" value="÷" onclick="insertOp('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button number gray" value="7" onclick="insertNum(7)"></td>
+                <td><input type="button" class="button number gray" value="8" onclick="insertNum(8)"></td>
+                <td><input type="button" class="button number gray" value="9" onclick="insertNum(9)"></td>
+                <td><input type="button" class="button symbol blue" value="X" onclick="insertOp('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button number gray" value="4" onclick="insertNum(4)"></td>
+                <td><input type="button" class="button number gray" value="5" onclick="insertNum(5)"></td>
+                <td><input type="button" class="button number gray" value="6" onclick="insertNum(6)"></td>
+                <td><input type="button" class="button symbol blue" value="-" onclick="insertOp('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button number gray" value="1" onclick="insertNum(1)"></td>
+                <td><input type="button" class="button number gray" value="2" onclick="insertNum(2)"></td>
+                <td><input type="button" class="button number gray" value="3" onclick="insertNum(3)"></td>
+                <td><input type="button" class="button symbol blue" value="+" onclick="insertOp('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button symbol gray" value="C" onclick="clean()"></td>
+                <td><input type="button" class="button number gray" value="0" onclick="insertNum(0)"></td>
+                <td><input type="button" class="button symbol gray" value="." onclick="insertDec()"></td>
+                <td><input type="button" class="button symbol blue" value="=" onclick="equalTo()"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
